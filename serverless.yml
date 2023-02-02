@@ -5,7 +5,7 @@ plugins:
   - serverless-webpack
   - serverless-cloudformation-resource-counter
   - serverless-prune-versions
-  - serverless-plugin-thundra
+  # - serverless-plugin-thundra
 
 provider:
   name: aws
@@ -16,7 +16,7 @@ provider:
     NODE_ENV: PRODUCTION
     AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
     LAMBDA_WRAPPER_LOG: true
-    thundra_apiKey: ${opt:thundra, env:THUNDRA_TOKEN}
+    # thundra_apiKey: ${opt:thundra, env:THUNDRA_TOKEN}
     DELETE_STACK_TOPIC: !Join
       - ':'
       - - arn:aws:sns
@@ -30,7 +30,7 @@ provider:
 
 custom:
   odin: ${file(./odin.yml)}
-  stage: ${opt:stage, env:STAGE, 'local'}
+  stage: ${opt:stage, env:STAGE, 'NotAutoDelete'}
   # https://github.com/manwaring/serverless-prune-versions
   prune:
     automatic: true

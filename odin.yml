@@ -1,17 +1,17 @@
 schedule:
   # This schedule initiates Odin once a day in the early morning (US ET) to clean up ephemeral stages
   daily:
-    rate: cron(0 8 ? * * *) # 8 AM UTC / 3 AM ET
+    rate: cron(0 8 ? * * *) # 8 AM UTC
 
-  # This schedule initiates Odin every hour to clean up ephemeral stages
-  hourly:
-    rate: cron(0 */1 ? * * *) # every hour
+  # # This schedule initiates Odin every hour to clean up ephemeral stages
+  # hourly:
+  #   rate: cron(0 */1 ? * * *) # every hour
 
 dynamicRules:
   daily:
-    staleAfter: 2 # When running the daily check, delete a stack if its older than 2 hours
-  hourly:
-    staleAfter: 8 # When running the hourly check, delete a stack if its older than 8 hours
+    staleAfter: 730 # When running the daily check, delete a stack if its older than 1 month
+  # hourly:
+  #   staleAfter: 8 # When running the hourly check, delete a stack if its older than 8 hours
 
 # All of these rules are consistent between the schedules
 staticRules:
@@ -19,20 +19,13 @@ staticRules:
   namesToRetain:
     - ControlTower
     - LumigoIntegrationV2
+    - CDKToolkit
+    - odin
+    - infra
 
   # Odin won't delete a stack with the following stages (case insensitive, full matches only)
   stagesToRetain:
-    - PROD
-    - PRODUCTION
-    - QA
-    - STAGING
-    - DEV
-    - DEVELOPMENT
-    - AUTO
-    - AUTOMATION
-    - INFRA
-    - INFRASTRUCTURE
-    - COMMON
+    - NotAutoDelete
 
   # Odin will only delete a stack if it's status is one of the following
   deleteableStatuses:
@@ -50,8 +43,8 @@ staticRules:
 
   # Odin will empty buckets with the following CloudFormation logical IDs (if you don't want to empty
   # all buckets)
-  bucketsToEmpty:
-    - ServerlessDeploymentBucket
-    - DocumentBucket
-    - S3BucketSite
-    - ApiDocumentationBucket
+  # bucketsToEmpty:
+  #   - ServerlessDeploymentBucket
+  #   - DocumentBucket
+  #   - S3BucketSite
+  #   - ApiDocumentationBucket

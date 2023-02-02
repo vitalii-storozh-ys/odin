@@ -9,15 +9,15 @@ export const deletableStack: CloudFormation.Stack = {
     {
       Description: 'Name of S3 bucket to hold website content',
       OutputKey: 'BucketName',
-      OutputValue: 'myteststack-s3bucket-jssofi1zie2w'
-    }
+      OutputValue: 'myteststack-s3bucket-jssofi1zie2w',
+    },
   ],
   StackStatusReason: null,
   CreationTime: new Date('December 17, 2019 03:24:00'),
   Capabilities: [],
   StackName: 'myteststack',
   StackStatus: 'CREATE_COMPLETE',
-  DisableRollback: false
+  DisableRollback: false,
 };
 
 export const notStaleCreate: CloudFormation.Stack = {
@@ -29,15 +29,15 @@ export const notStaleCreate: CloudFormation.Stack = {
     {
       Description: 'Name of S3 bucket to hold website content',
       OutputKey: 'BucketName',
-      OutputValue: 'myteststack-s3bucket-jssofi1zie2w'
-    }
+      OutputValue: 'myteststack-s3bucket-jssofi1zie2w',
+    },
   ],
   StackStatusReason: null,
   CreationTime: new Date(),
   Capabilities: [],
   StackName: 'myteststack',
   StackStatus: 'CREATE_COMPLETE',
-  DisableRollback: false
+  DisableRollback: false,
 };
 
 export const notStaleUpdate: CloudFormation.Stack = {
@@ -49,8 +49,8 @@ export const notStaleUpdate: CloudFormation.Stack = {
     {
       Description: 'Name of S3 bucket to hold website content',
       OutputKey: 'BucketName',
-      OutputValue: 'myteststack-s3bucket-jssofi1zie2w'
-    }
+      OutputValue: 'myteststack-s3bucket-jssofi1zie2w',
+    },
   ],
   StackStatusReason: null,
   CreationTime: new Date('December 17, 2019 03:24:00'),
@@ -58,7 +58,7 @@ export const notStaleUpdate: CloudFormation.Stack = {
   Capabilities: [],
   StackName: 'myteststack',
   StackStatus: 'UPDATE_COMPLETE',
-  DisableRollback: false
+  DisableRollback: false,
 };
 
 export const retainName: CloudFormation.Stack = {
@@ -70,15 +70,15 @@ export const retainName: CloudFormation.Stack = {
     {
       Description: 'Name of S3 bucket to hold website content',
       OutputKey: 'BucketName',
-      OutputValue: 'myteststack-s3bucket-jssofi1zie2w'
-    }
+      OutputValue: 'myteststack-s3bucket-jssofi1zie2w',
+    },
   ],
   StackStatusReason: null,
   CreationTime: new Date('December 17, 2019 03:24:00'),
   Capabilities: [],
   StackName: 'AWSControlTowerBP-BASELINE-CLOUDTRAIL-MASTER',
   StackStatus: 'CREATE_COMPLETE',
-  DisableRollback: false
+  DisableRollback: false,
 };
 
 export const retainStatus: CloudFormation.Stack = {
@@ -90,15 +90,15 @@ export const retainStatus: CloudFormation.Stack = {
     {
       Description: 'Name of S3 bucket to hold website content',
       OutputKey: 'BucketName',
-      OutputValue: 'myteststack-s3bucket-jssofi1zie2w'
-    }
+      OutputValue: 'myteststack-s3bucket-jssofi1zie2w',
+    },
   ],
   StackStatusReason: null,
   CreationTime: new Date('December 17, 2019 03:24:00'),
   Capabilities: [],
   StackName: 'myteststack',
   StackStatus: 'UPDATE_IN_PROGRESS',
-  DisableRollback: false
+  DisableRollback: false,
 };
 
 export const retainStage: CloudFormation.Stack = {
@@ -108,24 +108,24 @@ export const retainStage: CloudFormation.Stack = {
   Tags: [
     {
       Key: 'stage',
-      Value: 'prod'
-    }
+      Value: 'NotAutoDelete',
+    },
   ],
   Outputs: [
     {
       Description: 'Name of S3 bucket to hold website content',
       OutputKey: 'BucketName',
-      OutputValue: 'myteststack-s3bucket-jssofi1zie2w'
-    }
+      OutputValue: 'myteststack-s3bucket-jssofi1zie2w',
+    },
   ],
   StackStatusReason: null,
   CreationTime: new Date('December 17, 2019 03:24:00'),
   Capabilities: [],
   StackName: 'myteststack',
   StackStatus: 'CREATE_COMPLETE',
-  DisableRollback: false
+  DisableRollback: false,
 };
 
 export const describeStacksOutput: CloudFormation.DescribeStacksOutput = {
-  Stacks: [deletableStack]
+  Stacks: [deletableStack],
 };
